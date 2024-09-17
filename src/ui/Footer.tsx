@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const Footer: FC = () => {
   return (
-    <footer className="fixed bottom-0 w-full flex gap-6 bg-black-500 flex-wrap items-center justify-center p-4">
+    <footer className="fixed z-10 bottom-0 w-full flex gap-6 bg-black flex-wrap items-center justify-end p-4">
       <Link
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="/RomanPrisyazhnuk"
+        href="/defunkt"
         rel="noopener noreferrer"
       >
         <Image

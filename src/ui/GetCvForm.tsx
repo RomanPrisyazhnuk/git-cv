@@ -33,7 +33,6 @@ const GetCvForm = () => {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setUsername(e.target.value)
           }
-          status={error ? "error" : "default"}
         />
         {error && <p className="text-red-500 text-sm">{error}</p>}
         <Button type="submit" className="text-black" color="default">
