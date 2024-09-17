@@ -17,7 +17,7 @@ export default async function Home() {
           <li className="mb-2">Enter GitHub username.</li>
           <li>Get a CV based on account.</li>
         </ol>
-          <GetCvForm />
+        <GetCvForm />
       </main>
     </div>
   );

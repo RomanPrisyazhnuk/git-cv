@@ -10,16 +10,16 @@ export default async function CvPage({
 }) {
   // Getting user data
   const accountData: User | null = await getUserData(params.username);
-  let repositoriesData: Repository[] =[];
-  if(accountData) {
+  let repositoriesData: Repository[] = [];
+  if (accountData) {
     repositoriesData = await getUserRepositories(params.username);
-  }else{
+  } else {
     return (
       <div className="flex items-center justify-center text-2xl font-bold text-center w-full h-screen">
         {`No data in Github for username: ${params.username}`}
       </div>
     );
-  }    
+  }
   // Sort by latest updated repositories
   const sortedRepositories = repositoriesData
     .sort(
@@ -90,10 +90,12 @@ export default async function CvPage({
             <li key={repo.name} className="mb-4">
               <a href={repo.html_url} className="text-blue-500">
                 {repo.name}
-              
               </a>
-              <p>  {new Date(repo.created_at).getFullYear()}-
-                {new Date(repo.updated_at).getFullYear() } ({repo.language})</p>
+              <p>
+                {" "}
+                {new Date(repo.created_at).getFullYear()}-
+                {new Date(repo.updated_at).getFullYear()} ({repo.language})
+              </p>
               <p>{repo.description || "No description"}</p>
               <span>
                 ⭐ {repo.stargazers_count} | 🍴 {repo.forks_count}
