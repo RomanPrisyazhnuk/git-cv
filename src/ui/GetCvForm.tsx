@@ -20,7 +20,7 @@ const GetCvForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center w-full">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-4 p-6 shadow-lg rounded-md sm:flex-row"
