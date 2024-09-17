@@ -92,9 +92,7 @@ export default async function CvPage({
                 {repo.name}
               </a>
               <p>
-                {" "}
-                {new Date(repo.created_at).getFullYear()}-
-                {new Date(repo.updated_at).getFullYear()} ({repo.language})
+                {` ${new Date(repo.created_at).getFullYear()}-${new Date(repo.updated_at).getFullYear()} (${repo.language})`}
               </p>
               <p>{repo.description || "No description"}</p>
               <span>
